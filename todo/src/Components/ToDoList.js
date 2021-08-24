@@ -37,7 +37,7 @@ class ToDoList extends React.Component {
                     }
                 }
                 else {
-                    returntodo;
+                    return todo;
                 }
             })
         });
@@ -80,7 +80,7 @@ class ToDoList extends React.Component {
         else {
             todos = this.state.todos.filter(todo => todo.complete);
         }
-         console.log(todos)
+        console.log(todos)
         return (
             <div>
                 <ToDoForm onSubmit={this.addTodo} />
@@ -96,21 +96,22 @@ class ToDoList extends React.Component {
                     Todos left : {this.state.todos.filter(todo => !todo.complete).length}
                 </div>
                 <div className="b">
-                    <Button color='primary' onClick={() => this.changeToShow('all')}​​​​​​​​>All</Button>
-                    <Button color='primary' onClick={() => this.changeToShow('active')}​​​​​​​​>Active</Button>
-                    <Button color='primary' onClick={() => this.changeToShow('complete')}​​​​​​​​>Complete</Button>
+                    <Button color='primary' onClick={() => this.changeToShow('all')}>All</Button>
+                    <Button color='primary' onClick={() => this.changeToShow('active')}>Active</Button>
+                    <Button color='primary' onClick={() => this.changeToShow('complete')}>Complete</Button>
                 </div>
                 <div>
                     {this.state.todos.some(todo => todo.complete) ?
-                        <Button color='secondary' onClick={() => this.removeAllComplete()}​​​​​​​​>Remove All Complete Todos</Button> : null}
+                        <Button color='secondary' onClick={() => this.removeAllComplete()}>Remove All Complete Todos</Button> : null}
                 </div>
                 <div className="c" >
-                <Button variant='contained' color='secondary' onClick={() => this.clear()}​​​​​​​​> Clear All Entries </Button>
+                    <Button color='secondary' onClick={() => this.clear()}>Clear All Entries</Button>
+
+                </div>
             </div>
-    </div>
-     
-            );
-    };
+
+        );
+    }
 }
 export default ToDoList;
 

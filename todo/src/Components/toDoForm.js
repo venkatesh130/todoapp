@@ -33,7 +33,7 @@ class ToDoForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}​​​​​​​​>
+            <form onSubmit={this.handleSubmit}>
                 <Input
                     name="text"
                     placeholder="Enter To Do Item..."
@@ -46,4 +46,3 @@ class ToDoForm extends React.Component {
     };
 }
 export default ToDoForm;
-

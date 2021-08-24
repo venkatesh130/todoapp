@@ -1,0 +1,27 @@
+body{
+  background-color: blueviolet;
+}
+.App{
+  background-color: chartreuse;
+  height: 500px;
+  width: 400px;
+  box-shadow: 10px 10px 10px;
+  margin: 50px auto;
+   padding: 50px;
+   border-radius: 5px;
+}
+.App h1{
+  text-align: center;
+  padding-bottom: 50px;
+}
+.App  .a{
+  background-color: brown;
+}
+.b{
+  margin-top: 100px;
+  padding-left: 50px;
+}
+.c{
+  margin-top: 10px;
+  padding-left:75px;
+}
